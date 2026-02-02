@@ -1,0 +1,62 @@
+{
+  "tabs": {
+    "home": "Startseite",
+    "explore": "Erkunden"
+  },
+  "home": {
+    "welcome": "Willkommen!",
+    "step1": {
+      "title": "Schritt 1: Ausprobieren",
+      "editFile": "Bearbeiten Sie <bold>app/(tabs)/index.tsx</bold>, um Änderungen zu sehen. Drücken Sie <bold>{{shortcut}}</bold>, um die Entwicklertools zu öffnen."
+    },
+    "step2": {
+      "title": "Schritt 2: Erkunden",
+      "description": "Tippen Sie auf den Tab Erkunden, um mehr über diese Starter-App zu erfahren."
+    },
+    "step3": {
+      "title": "Schritt 3: Neu beginnen",
+      "description": "Wenn Sie bereit sind, führen Sie <bold>npm run reset-project</bold> aus, um ein neues <bold>app</bold>-Verzeichnis zu erhalten. Dies verschiebt das aktuelle <bold>app</bold>-Verzeichnis nach <bold>app-example</bold>."
+    },
+    "actions": {
+      "action": "Aktion",
+      "share": "Teilen",
+      "delete": "Löschen",
+      "actionPressed": "Aktion gedrückt",
+      "sharePressed": "Teilen gedrückt",
+      "deletePressed": "Löschen gedrückt"
+    }
+  },
+  "explore": {
+    "title": "Erkunden",
+    "subtitle": "Diese App enthält Beispielcode, um Ihnen den Einstieg zu erleichtern.",
+    "fileBasedRouting": {
+      "title": "Dateibasiertes Routing",
+      "description1": "Diese App hat zwei Bildschirme: <bold>app/(tabs)/index.tsx</bold> und <bold>app/(tabs)/explore.tsx</bold>",
+      "description2": "Die Layout-Datei in <bold>app/(tabs)/_layout.tsx</bold> richtet den Tab-Navigator ein.",
+      "learnMore": "Mehr erfahren"
+    },
+    "platformSupport": {
+      "title": "Android-, iOS- und Web-Unterstützung",
+      "description": "Sie können dieses Projekt auf Android, iOS und im Web öffnen. Um die Web-Version zu öffnen, drücken Sie <bold>w</bold> im Terminal, in dem dieses Projekt läuft."
+    },
+    "images": {
+      "title": "Bilder",
+      "description": "Für statische Bilder können Sie die Suffixe <bold>@2x</bold> und <bold>@3x</bold> verwenden, um Dateien für verschiedene Bildschirmdichten bereitzustellen",
+      "learnMore": "Mehr erfahren"
+    },
+    "theming": {
+      "title": "Helle und dunkle Modus-Komponenten",
+      "description": "Diese Vorlage unterstützt hellen und dunklen Modus. Der <bold>useColorScheme()</bold>-Hook ermöglicht es Ihnen, das aktuelle Farbschema des Benutzers zu überprüfen und die UI-Farben entsprechend anzupassen.",
+      "learnMore": "Mehr erfahren"
+    },
+    "animations": {
+      "title": "Animationen",
+      "description": "Diese Vorlage enthält ein Beispiel für eine animierte Komponente. Die <bold>components/HelloWave.tsx</bold>-Komponente verwendet die leistungsstarke <mono>react-native-reanimated</mono>-Bibliothek, um eine winkende Hand-Animation zu erstellen.",
+      "iosDescription": "Die <bold>components/ParallaxScrollView.tsx</bold>-Komponente bietet einen Parallaxen-Effekt für das Header-Bild."
+    }
+  },
+  "modal": {
+    "title": "Dies ist ein Modal",
+    "goHome": "Zur Startseite gehen"
+  }
+}
