@@ -1,0 +1,62 @@
+{
+  "tabs": {
+    "home": "Home",
+    "explore": "Explore"
+  },
+  "home": {
+    "welcome": "Welcome!",
+    "step1": {
+      "title": "Step 1: Try it",
+      "editFile": "Edit <bold>app/(tabs)/index.tsx</bold> to see changes. Press <bold>{{shortcut}}</bold> to open developer tools."
+    },
+    "step2": {
+      "title": "Step 2: Explore",
+      "description": "Tap the Explore tab to learn more about what's included in this starter app."
+    },
+    "step3": {
+      "title": "Step 3: Get a fresh start",
+      "description": "When you're ready, run <bold>npm run reset-project</bold> to get a fresh <bold>app</bold> directory. This will move the current <bold>app</bold> to <bold>app-example</bold>."
+    },
+    "actions": {
+      "action": "Action",
+      "share": "Share",
+      "delete": "Delete",
+      "actionPressed": "Action pressed",
+      "sharePressed": "Share pressed",
+      "deletePressed": "Delete pressed"
+    }
+  },
+  "explore": {
+    "title": "Explore",
+    "subtitle": "This app includes example code to help you get started.",
+    "fileBasedRouting": {
+      "title": "File-based routing",
+      "description1": "This app has two screens: <bold>app/(tabs)/index.tsx</bold> and <bold>app/(tabs)/explore.tsx</bold>",
+      "description2": "The layout file in <bold>app/(tabs)/_layout.tsx</bold> sets up the tab navigator.",
+      "learnMore": "Learn more"
+    },
+    "platformSupport": {
+      "title": "Android, iOS, and web support",
+      "description": "You can open this project on Android, iOS, and the web. To open the web version, press <bold>w</bold> in the terminal running this project."
+    },
+    "images": {
+      "title": "Images",
+      "description": "For static images, you can use the <bold>@2x</bold> and <bold>@3x</bold> suffixes to provide files for different screen densities",
+      "learnMore": "Learn more"
+    },
+    "theming": {
+      "title": "Light and dark mode components",
+      "description": "This template has light and dark mode support. The <bold>useColorScheme()</bold> hook lets you inspect what the user's current color scheme is, and so you can adjust UI colors accordingly.",
+      "learnMore": "Learn more"
+    },
+    "animations": {
+      "title": "Animations",
+      "description": "This template includes an example of an animated component. The <bold>components/HelloWave.tsx</bold> component uses the powerful <mono>react-native-reanimated</mono> library to create a waving hand animation.",
+      "iosDescription": "The <bold>components/ParallaxScrollView.tsx</bold> component provides a parallax effect for the header image."
+    }
+  },
+  "modal": {
+    "title": "This is a modal",
+    "goHome": "Go to home screen"
+  }
+}
