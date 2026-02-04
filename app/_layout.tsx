@@ -43,6 +43,7 @@ export default function RootLayout() {
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
           <Stack.Screen name="search" options={{ headerShown: false, presentation: 'modal' }} />
+          <Stack.Screen name="destination/[id]" options={{ headerShown: false, animation: 'slide_from_right' }} />
         </Stack>
         <StatusBar style="auto" />
       </ThemeProvider>
