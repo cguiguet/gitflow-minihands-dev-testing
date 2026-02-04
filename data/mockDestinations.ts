@@ -7,6 +7,15 @@ export interface Destination {
   currency: string;
   rating: number;
   description: string;
+  images?: string[];
+  highlights?: string[];
+  bestTimeToVisit?: string;
+  quickFacts?: {
+    language: string;
+    currency: string;
+    timezone: string;
+    visa: string;
+  };
 }
 
 export const mockDestinations: Destination[] = [
@@ -18,7 +27,23 @@ export const mockDestinations: Destination[] = [
     price: 899,
     currency: 'USD',
     rating: 4.8,
-    description: 'The City of Light awaits with iconic landmarks and world-class cuisine',
+    description: 'The City of Light awaits with iconic landmarks and world-class cuisine. Experience the romance of Paris with its stunning architecture, world-renowned museums, charming cafés, and exquisite French gastronomy. From the Eiffel Tower to the Louvre, every corner tells a story.',
+    images: [
+      'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80',
+      'https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&q=80',
+      'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80',
+      'https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&q=80',
+      'https://images.unsplash.com/photo-1509439581779-6298f75bf6e5?w=800&q=80',
+      'https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=800&q=80',
+    ],
+    highlights: ['Iconic Eiffel Tower', 'World-class museums', 'French cuisine', 'Charming cafés', 'Historic architecture', 'Seine River cruises'],
+    bestTimeToVisit: 'April to June and September to October',
+    quickFacts: {
+      language: 'French',
+      currency: 'Euro (EUR)',
+      timezone: 'CET (UTC+1)',
+      visa: 'Schengen visa required for most non-EU citizens',
+    },
   },
   {
     id: '2',
