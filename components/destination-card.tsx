@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { Image } from 'expo-image';
+import { router } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { Destination } from '@/data/mockDestinations';
 import { useThemeColor } from '@/hooks/use-theme-color';
@@ -15,7 +16,11 @@ export function DestinationCard({ destination, onPress }: DestinationCardProps) 
 
   const handlePress = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    onPress?.();
+    if (onPress) {
+      onPress();
+    } else {
+      router.push(`/destination/${destination.id}`);
+    }
   };
 
   return (
