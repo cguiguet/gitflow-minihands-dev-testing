@@ -34,7 +34,7 @@ export function ThemeToggle({ visible, onClose }: ThemeToggleProps) {
       transparent
       animationType="fade"
       onRequestClose={onClose}>
-      <Pressable style={styles.overlay} onPress={onClose}>
+      <Pressable style={styles.overlay} onPress={onClose} testID="theme-toggle-overlay">
         <View style={styles.container}>
           <View style={[styles.menu, { backgroundColor: cardBackground }]}>
             <Text style={[styles.title, { color: textColor }]}>Theme</Text>
