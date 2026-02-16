@@ -25,6 +25,7 @@ import { mockCategories } from '@/data/mockCategories';
 import { useThemeColor } from '@/hooks/use-theme-color';
 import { Destination } from '@/data/mockDestinations';
 import { Deal } from '@/data/mockDeals';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const { width } = Dimensions.get('window');
 
@@ -36,6 +37,7 @@ export default function HomeScreen() {
 
   const [activeDestinationIndex, setActiveDestinationIndex] = useState(0);
   const [refreshing, setRefreshing] = useState(false);
+  const [showThemeToggle, setShowThemeToggle] = useState(false);
 
   const { data: destinations, isLoading: destinationsLoading, refetch: refetchDestinations } = useDestinations();
   const { data: deals, isLoading: dealsLoading, refetch: refetchDeals } = useDeals();
@@ -89,7 +91,10 @@ export default function HomeScreen() {
           </View>
           <Pressable
             style={[styles.avatar, { backgroundColor: cardBackground }]}
-            onPress={() => Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}>
+            onPress={() => {
+              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+              setShowThemeToggle(true);
+            }}>
             <Text style={styles.avatarText}>JD</Text>
           </Pressable>
         </View>
@@ -209,6 +214,7 @@ export default function HomeScreen() {
 
         <View style={{ height: insets.bottom + 20 }} />
       </ScrollView>
+      <ThemeToggle visible={showThemeToggle} onClose={() => setShowThemeToggle(false)} />
     </View>
   );
 }

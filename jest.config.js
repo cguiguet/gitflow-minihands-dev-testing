@@ -18,6 +18,7 @@ module.exports = {
     'app/**/*.{ts,tsx}',
     'hooks/**/*.{ts,tsx}',
     'components/**/*.{ts,tsx}',
+    'contexts/**/*.{ts,tsx}',
     'data/**/*.{ts,tsx}',
     '!**/coverage/**',
     '!**/node_modules/**',

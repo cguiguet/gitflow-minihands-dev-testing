@@ -1,4 +1,4 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import { DarkTheme, DefaultTheme, ThemeProvider as NavigationThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
@@ -7,7 +7,7 @@ import 'react-native-reanimated';
 import '@/i18n/config';
 import { QueryClient, QueryClientProvider, focusManager } from '@tanstack/react-query';
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import { ThemeProvider, useTheme } from '@/contexts/theme-context';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -28,9 +28,23 @@ export const unstable_settings = {
   anchor: '(tabs)',
 };
 
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
+function RootLayoutContent() {
+  const { colorScheme } = useTheme();
 
+  return (
+    <NavigationThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
+        <Stack.Screen name="search" options={{ headerShown: false, presentation: 'modal' }} />
+        <Stack.Screen name="destination/[id]" options={{ headerShown: false, animation: 'slide_from_right' }} />
+      </Stack>
+      <StatusBar style="auto" />
+    </NavigationThemeProvider>
+  );
+}
+
+export default function RootLayout() {
   useEffect(() => {
     const subscription = AppState.addEventListener('change', onAppStateChange);
     return () => subscription.remove();
@@ -38,14 +52,8 @@ export default function RootLayout() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-          <Stack.Screen name="search" options={{ headerShown: false, presentation: 'modal' }} />
-          <Stack.Screen name="destination/[id]" options={{ headerShown: false, animation: 'slide_from_right' }} />
-        </Stack>
-        <StatusBar style="auto" />
+      <ThemeProvider>
+        <RootLayoutContent />
       </ThemeProvider>
     </QueryClientProvider>
   );
