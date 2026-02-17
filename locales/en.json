@@ -1,7 +1,8 @@
 {
   "tabs": {
     "home": "Home",
-    "explore": "Explore"
+    "explore": "Explore",
+    "surprise": "Surprise"
   },
   "home": {
     "welcome": "Welcome!",
@@ -58,5 +59,13 @@
   "modal": {
     "title": "This is a modal",
     "goHome": "Go to home screen"
+  },
+  "surprise": {
+    "title": "Surprise Me!",
+    "subtitle": "Discover your next adventure",
+    "instructions": "Drag and release the dart to find a random destination",
+    "landing": "You're going to...",
+    "viewDetails": "View Details",
+    "tryAgain": "Try Again"
   }
 }
