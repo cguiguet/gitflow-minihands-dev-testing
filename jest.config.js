@@ -6,6 +6,7 @@ module.exports = {
     '/node_modules/',
     'components/destination/__tests__/',
     'app/destination/__tests__/',
+    'app/\\(tabs\\)/__tests__/',
   ],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { configFile: './babel.config.js' }],
