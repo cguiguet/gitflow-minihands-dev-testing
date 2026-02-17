@@ -1,7 +1,8 @@
 {
   "tabs": {
     "home": "Startseite",
-    "explore": "Erkunden"
+    "explore": "Erkunden",
+    "surprise": "Überraschung"
   },
   "home": {
     "welcome": "Willkommen!",
@@ -58,5 +59,13 @@
   "modal": {
     "title": "Dies ist ein Modal",
     "goHome": "Zur Startseite gehen"
+  },
+  "surprise": {
+    "title": "Überrasch mich!",
+    "subtitle": "Entdecke dein nächstes Abenteuer",
+    "instructions": "Ziehe den Pfeil und lass ihn los, um ein zufälliges Ziel zu finden",
+    "landing": "Du fliegst nach...",
+    "viewDetails": "Details anzeigen",
+    "tryAgain": "Nochmal versuchen"
   }
 }
